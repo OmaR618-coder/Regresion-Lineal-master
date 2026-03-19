@@ -1,8 +1,6 @@
 from PyQt5 import QtWidgets,uic
-from CASOS.Caso_1 import Caso_uno #Importamos por que esta en otro archivo
-from CASOS.Caso_2 import Caso_dos
-from CASOS.Caso_3 import Caso_tres
-from CASOS.Caso_4 import Caso_cuatro
+"""from CASOS.regresion_lineal import Caso_uno #Importamos por que esta en otro archivo"""
+from CASOS.regresion_lineal import Regresion_lineal
 
 class Interfaz(QtWidgets.QDialog): #HEREDAS DE UN MAIN WINDOW
     def __init__(self):
@@ -23,20 +21,24 @@ class Interfaz(QtWidgets.QDialog): #HEREDAS DE UN MAIN WINDOW
        
 
     def case1(self):
-        c1 = Caso_uno(self)
-        c1.code1()
+        c1 = Regresion_lineal(self)
+        c1.caso1()
+        c1.calcularRegresion()
    
     def case2(self):
-        c2 = Caso_dos(self)
-        c2.code2()
+        c2 = Regresion_lineal(self)
+        c2.caso2()
+        c2.calcularRegresion()
 
     def case3(self):
-        c3 = Caso_tres(self)
-        c3.code3()
+        c3 = Regresion_lineal(self)
+        c3.caso3()
+        c3.calcularRegresion()
 
     def case4(self):
-        c4 = Caso_cuatro(self)
-        c4.code4()
+        c4 = Regresion_lineal(self)
+        c4.caso4()
+        c4.calcularRegresion()
        
     def salir(self):
         self.close()
